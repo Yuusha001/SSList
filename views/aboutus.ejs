@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+<!-- about -->
+    <div class="main">
+        <div class="top">
+            <h1>Tạo Danh Sách Của Riêng Bạn</h1>
+            <h2>Bạn Đã Xem Những Gì</h2>
+            <p>Tạo danh sách được cá nhân hóa của bạn từ hàng chục nghìn đầu sách trên cơ sở dữ liệu anime và game lớn nhất thế giới.</p>
+            <img src="/img/ds.png" height="300px" width="400px" >
+            <h2>Cần phải cập nhật?</h2>
+            <p>Sử dụng danh sách của bạn để sắp xếp và theo dõi những tiêu đề bạn đã hoàn thành, tiến độ hiện tại của bạn, những gì bạn định xem hoặc đọc và hơn thế nữa</p>
+            <img src="/img/find.png">
+        </div>
+        
+        <div class="mid">
+            <h1>JOIN THE COMMUNITY</h1>
+            <h2>Bạn thích những tựa game nào?</h2>
+            <p>Diễn đàn của chúng tôi là nơi tốt nhất để thảo luận về tựa game yêu thích của bạn và cập nhật các tin tức và xu hướng về anime và game.</p>
+            <img src="/img/hi.png">
+            <h2>Ai còn online?</h2>
+            <p>Kết nối với hàng triệu người hâm mộ từ hơn 200 quốc gia trên toàn thế giới trong cộng đồng trực tuyến tích cực hơn nửa triệu người dùng mỗi ngày của chúng tôi!</p>
+            <img src="/img/cac-cach-goi-friend-trong-tieng-anh.png">
+        </div>
+
+        <div class="bot">
+            <h1>Khám Phá Thế Giới Anime Và Game Ngay</h1>
+            <a href="/login">
+            <input type="button" value="Đăng Kí Ngay"></a>
+            <p>Đăng Kí Ngay Bây Giờ Để Theo Dõi Những Tự Game Và Anime Hot Nhất</p>
+  
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <img src="/img/1.png" style="width:100%">
+                </div>        
+                <div class="mySlides fade">
+                    <img src="/img/2.jpg" style="width:100%">
+                </div> 
+                <div class="mySlides fade">
+                    <img src="/img/3.jpg" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="/img/onepiece1999-1280.jpg" style="width:100%">
+                  </div>
+                  <div class="mySlides fade">
+                    <img src="/img/mot-youtuber-chuyen-ve-csgo-bi-steam-vac-sau-khi-lam-video-keu-g-f0d9a2.jpg" style="width:100%">
+                  </div>
+                  <div class="mySlides fade">
+                    <img src="/img/valorant-personajes.jpg" style="width:100%">
+                  </div>
+                  <div class="mySlides fade">
+                    <img src="/img/72e24c93e7b0c336fa188eb1201565e1.jpg" style="width:100%">
+                  </div>
+              </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <%- include('./partials/foot.ejs') %>
+</body>
+</html>
+<script>
+ var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000);
+}
+</script>

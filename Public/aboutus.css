@@ -1,0 +1,109 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('./img/space-planet-3d-monochrome-wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+.main{
+    margin-top: 5%;
+}
+
+h1, h2, p{
+    text-align: center;
+}
+h1{
+    color: rgb(233, 189, 124);
+}
+h2{
+    color: rgb(241, 48, 106);
+}
+img{
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+.main input[type = "button"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 40px auto;
+    text-align: center;
+    border: 2px solid royalblue;
+    padding: 14px 40px;
+    outline: none;
+    color: blue;
+    border-radius: 24px;
+    transition: 0,25s;
+    cursor: pointer; 
+}
+.main input[type = "button"]:hover
+{
+    color: skyblue;
+    background: royalblue;
+}
+.top{
+    width: 60em;
+    margin: 30px auto;
+    background: rgb(255, 230, 230);
+    margin-top: 10px;
+    border-radius: 15px;
+    padding: 30px 60px;
+}
+.mid{
+    width: 60em;
+    margin: 30px auto;
+    background: rgb(230, 255, 245);
+    border-radius: 15px;
+    padding: 30px 60px;
+}
+.bot{
+    width: 60em;
+    margin: 30px auto;
+    background: rgb(234, 230, 255);
+    border-radius: 15px;
+    padding: 30px 60px;
+}
+
+a{
+text-decoration: none;
+}
+
+.content{
+    margin-left: 23%;
+    margin-right: 23%;
+    width: auto;
+    height: 43px;
+}
+
+.content ul {
+    min-width: 980px;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    margin-block-end: 1em;
+    margin: 0;
+}
+
+.content li {
+    float: left;
+    margin: auto;
+    text-align: center;
+}
+  
+.content li a {
+    display: block;
+    color: white;
+    padding: 9px;
+    text-align: center;
+    text-decoration: none;
+}
+  
+.content li a:hover {
+    background-color: #111;
+}

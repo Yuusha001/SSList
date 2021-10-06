@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <div class="demo">
+        <nav>
+        <ul class="menu">
+            <li class="menu_list">
+                <span class="front fas fa-home"></span>
+                <a href="/" class="side"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                    <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+                  </svg></a>
+            </li>
+            <li class="menu_list">
+                <span class="front fas fa-info"></span>
+                <a href="/post" class="side">Post</a>
+            </li>
+            <li class="menu_list">
+                <span class="front fas fa-briefcase"></span>
+                <a href="/find" class="side"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                  </svg></a>
+            </li>
+            <li class="menu_list">
+                <span class="front fas fa-paper-plane"></span>
+                <a href="/login" class="side">Log Out</a>
+            </li>
+        </ul>
+        </nav>
+        <div class="content">
+            <div id="large-header" class="large-header">
+                <canvas id="demo-canvas"></canvas>
+                <h1 class="main-title"><span class="thin">Wellcome back </span> <%= acc.Name %> </h1>
+                <div class="main-content">
+                    <img src="../Image/Avatar-PNG-Download-Image.png">
+                    <ul>
+                        <li>Name : <%= acc.Name %> </li>
+                        <li>User : <%= acc.userName %></li>
+                        <li>Email : <%= acc.email  %> </li>
+                    </ul>
+                </div>
+
+                <div class="wrapper">
+                    <canvas id='c'></canvas>
+                    <div class="label">text</div>
+                    <p>Please mouse over the dots</p>
+                </div>
+                  
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/foot.ejs') %>
+</body>
+</html>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-content
+{
+    width: 45%;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    color: #F9F1E9;
+    font-size: 25px;
+}
+.main-content ul {
+    margin-left: 5%;
+    
+}
+
+.main-content img{
+    height: 150px;
+    width: 150px;
+    float: right;
+}
+
+nav{
+    position: fixed;
+    z-index: 9999;
+    top: 40%;
+    left: 5%;
+    border:#34465d solid 1px;
+}
+
+.demo{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+ul.menu {
+    display: inline-block;
+    list-style-type: none;
+}
+li.menu_list {
+    height: 85px;
+    width: 85px;
+    position: relative;
+}
+li.menu_list .front,
+a.side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 86px;
+    width: 100%;
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .5s ease-out;
+    cursor: pointer;
+}
+li.menu_list .front {
+    color: #FFFC00;
+    transform-origin: 0 0;
+}
+a.side {
+    background-color: #FFFC00;
+    color: #34465d;
+    transform-origin: 0 0 85px;
+    transform: rotateY(-90deg);
+}
+li.menu_list:hover a.side {
+    transform: rotateY(0deg);
+}
+li.menu_list:hover .front {
+    transform: rotateY(90deg);
+}
+
+body{
+    background: url('../Image/demo-bg.jpg');
+    background-size: cover;
+    z-index: -9999;
+}
+
+.large-header {
+   position: relative;
+   width: 100%;
+   overflow: hidden;
+}
+
+.main-title {
+   position: absolute;
+   margin: 0;
+   padding: 5;
+   color: #F9F1E9;
+   text-align: center;
+   top: 10%;
+   left: 50%;
+   -webkit-transform: translate3d(-40%, -30%, 0);
+   transform: translate3d(-40%, -30%, 0);
+}
+
+.demo .main-title {
+    font-size: 2.2em;
+    text-transform: uppercase;
+}
+
+.main-title .thin {
+   font-weight: 200;
+   top: 30%;
+   left: 50%;
+}
+
+
+@media only screen and (max-width: 768px) {
+   .demo .main-title {
+      font-size: 3em;
+   }
+}
+
+.wrapper {
+    top: 40%;
+    left: 25%;
+    display: block;
+    margin: 5em auto;
+    border: 1px solid #555;
+    border-radius: 5px;
+    width: 50%;
+    height: 400px;
+    position: absolute;
+    text-align: center;
+}
+.wrapper p{
+    text-align:center;
+    color: #F9F1E9;
+}
+.label {
+  height: 1em;
+  padding: .3em;
+  background: rgba(255, 255, 255, .8);
+  position: absolute;
+  display: none;
+  color:#333;
+  
+}
+</style>
+
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script>
+<script src="../admin.js"></script>

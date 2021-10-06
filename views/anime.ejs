@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    
+    <div class="anime_content">
+        <h1>All Posts</h1>
+        <div class="main">
+        <% if(blogs.length > 0){ %>
+            <% blogs.forEach(blog => { %>
+                <div class="blog">
+                    <a href="/anime/<%= blog._id %> ">
+                        <div class="content">
+                        <h2><%= blog.title %></h2>
+                        <p><%= blog.snippet %></p>
+                        </div>
+                        <img src="./<%= blog.image %> ">
+                    </a>
+                </div>
+            <%})%>
+        <%} else {%>
+            <p>Nothing to display</p>
+        <%}%>
+        </div>
+    </div>
+
+    <%- include('./partials/foot.ejs') %>
+</body>
+
+<style>
+    body{
+        background: url('./img/space-planet-3d-monochrome-wallpaper.jpg');
+        background-size: cover;
+        color: azure;
+    }
+
+
+    .anime_content{
+        width: 70%;
+        margin: auto;
+        margin-top: 5%;
+        background-color: rgba(51, 50, 50, 0.533);
+        border-radius: 25px;
+        margin-bottom: 5%;
+    }
+
+    .main{
+        margin-left: 5%;
+    }
+
+    .blog{
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+    .blog a{
+        color: rgb(153, 161, 248);
+        text-decoration: none;
+        display: grid;
+        grid-template-columns: 60% 30%;
+    }
+
+    .blog p{
+        color:azure;
+        display: flex;
+    }
+    
+    .blog img{
+        grid-column-start: 2;
+        margin: auto;
+        margin-left: 20px;
+        width: 300px;
+        height: auto;
+        border-radius: 15px;
+    }
+
+    .anime_content h1{
+        text-align: center;
+
+    }
+
+    .content h2{
+        text-align: center;
+        font-weight: bold;
+    }
+
+</style>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <form id="login" action="/login" method="POST">
+        <p>Đăng Nhập Vào SSList</p>
+        <input type="text" autocomplete="off" name="userName" placeholder="Tên Tài Khoản" id="userName">
+        <input type="password" autocomplete="off" name="password" placeholder="Mật Khẩu" id="password">
+        <input type="submit" value="Đăng Nhập">
+        <div class="ask">Không có tài khoản ?</div>
+        <a href="/register">
+        <input type="button" value="Đăng Kí">
+        </a>
+    </form>
+    <%- include('./partials/foot.ejs') %>
+</body>
+
+</html>

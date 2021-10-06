@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+     background-image: url("./Image/vanhnenvutrusieudep.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#login{
+    width: 300px;
+    padding: 50px;
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background: rgba(48, 43, 43, 0.533);
+    text-align: center;
+}
+
+#login input[type = "text"],
+#login input[type = "password"]
+{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid royalblue;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0,25s;
+}
+#login input[type = "text"]:focus,
+#login input[type = "password"]:focus{
+    width: 300px;
+    border-color: blueviolet;
+}
+#login p{
+    color: azure;
+    text-transform: uppercase;
+    font-weight: 750;
+    font-size: 26px;}
+::placeholder{
+    color: rgb(197, 197, 197);
+}
+.ask{
+    font-size: 18px;
+    color: azure;
+}
+#login input[type = "button"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid darkorange;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0,25s;
+    cursor: pointer; 
+}
+#login input[type = "button"]:hover
+{
+    color: #255784;
+    background: thistle;
+}
+
+a{
+    text-decoration: none;
+}
+
+#login input[type = "submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid darkorange;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0,25s;
+    cursor: pointer; 
+}
+#login input[type = "submit"]:hover
+{
+    color: #255784;
+    background: thistle;
+}

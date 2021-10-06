@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url("./Image/vanhnenvutrusieudep.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.main{
+    margin-top: 10%;
+    width: 300px;
+    padding: 50px;
+    position: absolute;
+    top: -45%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background: rgba(48, 43, 43, 0.533);
+    text-align: center;
+}
+.box input[type = "text"],
+.box input[type = "password"],
+.box input[type = "email"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid royalblue;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0,25s;
+}
+.box input[type = "text"]:focus,
+.box input[type = "password"]:focus,
+.box input[type = "email"]:focus{
+    width: 300px;
+    border-color: blueviolet
+}
+.box input[type = "submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid darkorange;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0,25s;
+    cursor: pointer;
+}
+.box input[type = "submit"]:hover{
+    color: #255784;
+    background: thistle;
+}
+.tieude{
+    color: azure;
+    text-transform: uppercase;
+    font-weight: 788;
+    font-size: 26px;}
+.details{
+    color: azure;
+    display: flex;
+    flex-wrap: wrap;
+}
+.gender{
+    text-transform: uppercase;
+    color: azure;
+}
+::placeholder{
+    color: rgb(153, 172, 172);
+}

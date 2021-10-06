@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <div class="main">
+        <div class="tieude">Đăng Ký Tài Khoản SSList</div>
+        <form class="register" action="/register" method="POST">
+            <div class="box">
+                <span class="details">Tên Đầy Đủ</span>
+                <input type="text" placeholder="Tên Của Bạn" id="Name" name="Name" required>
+            </div>
+            <div class="box">
+                <span class="details">Email Của Bạn</span>
+                <input type="email" placeholder="Email" id="email" name = "email" required>
+            </div>
+            <div class="box">
+                <span class="details">Tên Tài Khoản</span>
+                <input type="text" placeholder="Tên Tài Khoản" id="userName" name="userName" required>
+            </div>
+            <div class="box">
+                <span class="details">Mật Khẩu</span>
+                <input type="password" class="lock" name="password" placeholder="Mật Khẩu" id="password1" required>
+            </div>
+            <div class="box">
+                <span class="details">Nhập Lại Mật Khẩu</span>
+                <input type="password" class="lock" name="confirm-password" placeholder="Nhập Lại Mật Khẩu" id="password2" required>
+            </div>
+            <div class="box">
+                <input type="submit" value="Đăng Ký">
+            </div>
+        </form>
+    </div>
+    
+    <%- include('./partials/foot.ejs') %>
+</body>
+</html>
+
+<script type="text/javascript">
+    window.onload = function () {
+        document.getElementById("password1").onchange = validatePassword;
+        document.getElementById("password2").onchange = validatePassword;
+    }
+    function validatePassword(){
+        var pass2=document.getElementById("password2").value;
+        var pass1=document.getElementById("password1").value;
+        if(pass1!=pass2)
+            document.getElementById("password2").setCustomValidity("Không Khớp");
+        else
+            document.getElementById("password2").setCustomValidity('');	 
+    }
+</script>
