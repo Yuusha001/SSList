@@ -15,7 +15,7 @@
                             <a href="/anime/<%= blog._id %> ">
                                 <div class='imgContainer'> <img src="./<%= blog.image %>"> </div>
                                 <div class="content">
-                                    <h2><%= blog.title %></h2>
+                                    <h4><%= blog.title %></h4>
                                     <p><%= blog.snippet %></p>
                                 </div>
                             </a>
@@ -41,7 +41,7 @@
     }
 
     .anime_content{
-        width: 70%;
+        width: 80%;
         margin: auto;
         margin-top: 5%;
         background-color: rgba(51, 50, 50, 0.533);
@@ -64,7 +64,7 @@
     }
 
     .container .card {
-        max-width: max-content;
+        max-width: 300px;
         height: max-content;
         padding: 20px 15px;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
@@ -73,6 +73,7 @@
 
     .container .card:hover {
         height: 350px;
+        margin: auto;
     }
 
     .container .card .imgContainer {
@@ -81,12 +82,14 @@
         height: auto;
         top: -50px;
         z-index: 1;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2)
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        margin: auto;
     }
 
     .container .card .imgContainer img {
         max-width: 100%;
         border-radius: 4px;
+        text-align: center;
     }
 
     .container .card .content {
@@ -116,7 +119,12 @@
     
     .anime_content h1{
         text-align: center;
+    }
 
+    .col{
+        margin: auto;
+        margin-bottom: 3%;
+        
     }
 </style>
 </html>
