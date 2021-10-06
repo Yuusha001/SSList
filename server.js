@@ -21,7 +21,7 @@ moogoose.connect(dbURI,{
     useUnifiedTopology: true
 }).then((res) => {
     //open port
-    app.listen(5000);
+    app.listen(process.env.PORT || 5000);
     console.log('Server open in port 5000 !');
 }).catch((err) => console.log(err))
 
