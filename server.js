@@ -65,6 +65,9 @@ app.get('/anime',(req,res) => {
     })
 });
 
+app.get('/faq',(req,res)=>{
+    res.render('faq',{title: 'FAQ'});
+});
 
 app.get('/find',(req,res) => {
     Product.find().then((result) => {
