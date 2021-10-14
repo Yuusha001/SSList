@@ -143,7 +143,7 @@ app.post('/post', upload ,(req,res) => {
     });
     console.log(product);
     product.save().then((result)=>{
-        res.redirect('/post');
+        res.redirect('/anime');
     }).catch((err)=>{
         console.log(err);
     })
